@@ -1,5 +1,5 @@
-const QuestionDMLA = require('../models/questionDMLA');
-const AnswerDMLA = require('../models/answerDMLA');
+const QuestionDMLA = require('../../models/DMLA/questionDMLA');
+const AnswerDMLA = require('../../models/DMLA/answerDMLA');
 
 
 exports.createQuestionDMLA = (req, res) => {
@@ -44,9 +44,9 @@ exports.getQuestionDMLAById = (req, res) => {
     // QuestionDMLA.findOne({_id: req.params.idQuestionDMLA})
     //     .then(question => {
     //         AnswerDMLA.find({questionId: question._id})
-    //             .then(answer => {
+    //             .then(answerALZ => {
     //                 console.log(question);
-    //                 answer.forEach(a => {
+    //                 answerALZ.forEach(a => {
     //                     // console.log(a);
     //                     question.answers.push(a);
     //                     // console.log(question);

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router({mergeParams: true});
 
-const userCtrl = require('../../../controllers/questionDMLA');
+const userCtrl = require('../../../controllers/DMLA/questionDMLA');
 
 const answerDMLARoute = require("./answerDMLA/answerDMLA")
 

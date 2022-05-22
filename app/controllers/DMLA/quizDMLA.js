@@ -1,12 +1,14 @@
-const QuizDMLA = require('../models/quizDMLA');
-const QuestionDMLA = require('../models/questionDMLA');
-const AnswerDMLA = require('../models/answerDMLA');
+const QuizDMLA = require('../../models/DMLA/quizDMLA');
+const QuestionDMLA = require('../../models/DMLA/questionDMLA');
+const AnswerDMLA = require('../../models/DMLA/answerDMLA');
 
 
 exports.createQuizDMLA = (req, res) => {
     console.log("JE CREE UN QUIZDMLA")
     const quizDMLA = new QuizDMLA({
-        theme: req.body.theme, name: req.body.name, questions: [],
+        theme: req.body.theme,
+        name: req.body.name,
+        questions: [],
     });
     quizDMLA.save()
         .then(() => res.status(201).json({message: 'Quiz enregistré !'}))
@@ -44,7 +46,7 @@ exports.getQuizDMLAById = (req, res) => {
 };
 
 exports.getAllQuizDMLA = (req, res) => {
-    console.log("JE SUIS EN TRAIN DE GET QUIZDMLA")
+    console.log("JE SUIS EN TRAIN DE GET ALLQUIZDMLA")
     QuizDMLA.find()
         .then(quiz => {
             const nbQuiz = quiz.length;

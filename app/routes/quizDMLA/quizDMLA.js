@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router({mergeParams: true});
 
-const userCtrl = require('../../controllers/quizDMLA');
+const userCtrl = require('../../controllers/DMLA/quizDMLA');
 const questionDMLARoute = require("./questionDMLA/questionDMLA")
 
 router.use('/:idQuizDMLA/questionsDmla', questionDMLARoute)

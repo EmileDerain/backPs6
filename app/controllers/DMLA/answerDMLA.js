@@ -1,4 +1,4 @@
-const AnswerDMLA = require('../models/answerDMLA');
+const AnswerDMLA = require('../../models/DMLA/answerDMLA');
 
 exports.createAnswerDMLA = (req, res) => {
     console.log(req.params.idQuestionDMLA);
