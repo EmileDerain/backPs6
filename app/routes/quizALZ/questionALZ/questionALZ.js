@@ -8,8 +8,8 @@ const answerALZRoute = require("./answerALZ/answerALZ")
 router.use('/:idQuestionALZ/answersALZ', answerALZRoute)
 
 router.post('/', userCtrl.createQuestionALZ);
-// router.get('/:idQuestionDMLA', userCtrl.getQuestionDMLAById);     //INUTILE
+router.get('/:idQuestionALZ', userCtrl.getQuestionALZById);     //INUTILE
 //
-// router.delete('/:idQuestionDMLA', userCtrl.deleteQuestionDMLAById)
+router.delete('/:idQuestionALZ', userCtrl.deleteQuestionALZById)
 
 module.exports = router;

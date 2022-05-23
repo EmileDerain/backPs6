@@ -35,7 +35,7 @@ exports.createQuizGameALZ = (req, res) => {
         nbRepetition: req.body.nbRepetition,
     });
     quizGame.save()
-        .then(() => res.status(201).json({message: 'Partie ALZ enregistré !'}))
+        .then((quiz) => res.status(201).json(quiz)) // {message: 'Partie ALZ enregistré !'}
         .catch(error => {
             console.log(error);
             res.status(400).json({erreur: "Il manque une KEY quizGame", error});

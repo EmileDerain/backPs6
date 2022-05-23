@@ -4,7 +4,7 @@ const router = express.Router({mergeParams: true});
 const userCtrl = require('../../controllers/ALZ/quizALZ');
 const questionALZRoute = require("./questionALZ/questionALZ")
 
-router.use('/:idQuizALZ/questionsAlz', questionALZRoute)
+router.use('/:idQuizALZ/questionsALZ', questionALZRoute)
 
 router.post('/', userCtrl.createQuizALZ);
 router.get('/', userCtrl.getAllQuizALZ)
